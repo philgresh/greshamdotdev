@@ -3,8 +3,17 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // Available options and their defaults:
+        base64Width: 20,
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

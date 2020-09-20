@@ -2,26 +2,28 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Phil Gresham | Fullstack software engineer',
+  lang: 'en',
+  description: 'Personal website of Phil Gresham',
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
+  name: 'Phil Gresham',
+  subtitle: "I'm a software engineer, geographer, and woodworker.",
+  cta: 'Learn more about me',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
+  imgClassname: 'rounded shadow-lg',
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume:
+    'https://drive.google.com/file/d/1Vh4ArxgnH9nS7z1-57lXq4G_8J6g2BKZ/view?usp=sharing', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -67,23 +69,13 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/philgresham/',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/philgresh',
     },
   ],
 };
