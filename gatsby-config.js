@@ -31,13 +31,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Phil Gresham`,
+        short_name: `Gresham.dev`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#02aab0`,
+        background_color: `#f1f7ed`,
+        theme_color: `#146067`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-178508526-1',
       },
     },
   ],
