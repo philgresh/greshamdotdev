@@ -77,8 +77,8 @@ const Projects = () => {
                   <Fade
                     right={isDesktop}
                     bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
+                    duration={600}
+                    delay={600}
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
@@ -88,23 +88,9 @@ const Projects = () => {
                         aria-label="Project Link"
                         rel="noopener noreferrer"
                       >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
-                          </div>
-                        </Tilt>
+                        <div data-tilt className="thumbnail rounded">
+                          <ProjectImg alt={title} filename={img} />
+                        </div>
                       </a>
                     </div>
                   </Fade>

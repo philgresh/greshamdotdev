@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/no-danger */
 /* eslint-disable react/forbid-prop-types */
@@ -18,12 +19,23 @@ export default function HTML({
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
+        />
         {headComponents}
       </head>
       <body {...bodyAttributes}>
         {preBodyComponents}
-        <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
+        <div
+          key="body"
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: body }}
+        />
         {postBodyComponents}
       </body>
     </html>

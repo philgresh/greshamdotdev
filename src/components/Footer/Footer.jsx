@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          Template developed by{' '}
+          &copy;2020 Phil Gresham | Template developed by&nbsp;
           <a
             href="https://github.com/cobidev"
             target="_blank"

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
+import DevIcon, { iconList } from 'devicon-react-svg';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
+// import ProjectImg from '../Image/ProjectImg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
@@ -22,6 +22,11 @@ const Skills = () => {
     }
   }, []);
 
+  const devIconStyle = {
+    fill: '#d43f12',
+    height: '80px',
+  };
+
   return (
     <section id="skills">
       <Container>
@@ -29,7 +34,7 @@ const Skills = () => {
           <Title title="Skills" />
           <Row>
             {skills.map((skill) => {
-              const { id, faIcon, name, src } = skill;
+              const { id, faIcon, name, src, devIcon } = skill;
 
               return (
                 <Col key={id} lg={4} sm={2}>
@@ -40,19 +45,12 @@ const Skills = () => {
                     delay={200}
                     distance="30px"
                   >
-                    <div className="project-wrapper__text">
-                      <h5 className="project-wrapper__text-title">{name}</h5>
-                      <div height="30px">
-                        {faIcon ? (
-                          <i
-                            className={`fa fa-${
-                              faIcon || 'refresh'
-                            } fa-inverse`}
-                          />
-                        ) : (
-                          <img src={src} alt={`${name} icon`} height="100%" />
-                        )}
-                      </div>
+                    <div className="skills-wrapper" data-tooltip={name}>
+                      <DevIcon
+                        icon={devIcon}
+                        style={devIconStyle}
+                        viewBox="0 0 32 32"
+                      />
                     </div>
                   </Fade>
                 </Col>

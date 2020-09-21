@@ -9,7 +9,7 @@
   padding: 15rem 0 10rem 0;
   margin-top: -15rem;
   margin-bottom: -1px;
-  color: darken($burnt-sienna, 10%);
+  color: darken($burnt-sienna, 15%);
   // color: $dark-grey;
 
   @include respond(tab-land) {
@@ -23,19 +23,87 @@
     margin-top: 3.2rem;
     padding: 0 2rem;
     backface-visibility: hidden;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-size: 8rem;
+    cursor: pointer;
 
-    &__text {
-      margin-bottom: 2.5rem;
+    @include respond(phone) {
+      font-size: 4rem;
     }
 
-    &__text,
-    a {
-      font-size: 2.4rem;
+    // https://codepen.io/cbracco/pen/qzukg
+    /* Add this attribute to the element that needs a tooltip */
+    [data-tooltip] {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
 
-      // Responsive for skills text
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+    /* Base styles for the entire tooltip */
+    [data-tooltip]:before,
+    [data-tooltip]:after,
+    .tooltip:before,
+    .tooltip:after {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+        -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+      -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+        -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      pointer-events: none;
+    }
+
+    /* Position tooltip above the element */
+    [data-tooltip]:before {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-bottom: 5px;
+      margin-left: -80px;
+      padding: 7px;
+      width: 160px;
+      // -webkit-border-radius: 3px;
+      // -moz-border-radius: 3px;
+      // border-radius: 3px;
+      // background-color: #000;
+      // background-color: hsla(0, 0%, 20%, 0.9);
+      font-family: 'Montserrat', sans-serif;
+      color: inherit;
+      content: attr(data-tooltip);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    /* Triangle hack to make tooltip look like a speech bubble */
+    // [data-tooltip]:after {
+    //   position: absolute;
+    //   bottom: 150%;
+    //   left: 50%;
+    //   margin-left: -5px;
+    //   width: 0;
+    //   border-top: 5px solid #000;
+    //   border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    //   border-right: 5px solid transparent;
+    //   border-left: 5px solid transparent;
+    //   content: ' ';
+    //   font-size: 0;
+    //   line-height: 0;
+    // }
+
+    /* Show tooltip content on hover */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
