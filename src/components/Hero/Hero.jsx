@@ -28,7 +28,7 @@ const Header = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-  }, [window.innerWidth]);
+  }, []);
 
   return (
     <section id="hero" className="jumbotron">
