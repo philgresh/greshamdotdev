@@ -55,7 +55,7 @@ export const projectsData = [
     info:
       'AcrossWords is a variation on the classic Crosswords game. Players are provided with a clue and a limited amount of time to fill out as many words as possible. The next word is always generated such that it overlaps with one to three letters of the beginning or end of the previous word',
     info2: 'Tech stack: React, Redux, ExpressJS, NodeJS, MongoDB',
-    url: 'acrosswords.herokuapp.com/',
+    url: 'https://acrosswords.herokuapp.com/#/',
     repo: 'https://github.com/jacobprall/CrossWords',
   },
   {
