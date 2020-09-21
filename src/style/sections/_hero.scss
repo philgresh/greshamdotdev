@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
@@ -15,13 +14,14 @@
   right: 0;
   z-index: -1;
   margin-bottom: -4rem;
-
-
+  
+  
+  // background: $white-color;
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
-  /* background: url("/src/assets/[your-image].png");
+  background: url('/public/icefield_pkwy.jpg');
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -51,8 +51,10 @@
 
   .hero-cta {
     display: flex;
-
+    flex-direction: row;
+    
     @include respond(tab-port) {
+      flex-direction: column;
       justify-content: center;
     }
 

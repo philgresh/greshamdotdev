@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 
@@ -13,6 +14,7 @@ import {
   projectsData,
   contactData,
   footerData,
+  skillsData,
 } from '../mock/data';
 
 function App() {
@@ -35,12 +37,16 @@ function App() {
   const projects = projectsData;
   const contact = contactData;
   const footer = footerData;
+  const skills = skillsData;
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+    <PortfolioProvider
+      value={{ hero, about, projects, contact, footer, skills }}
+    >
       <Hero />
       <About />
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
     </PortfolioProvider>

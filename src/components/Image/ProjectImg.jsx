@@ -38,7 +38,11 @@ const ProjectImg = ({ filename, alt, imgClassname }) => (
 ProjectImg.propTypes = {
   filename: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  imgClassname: PropTypes.string.isRequired,
+  imgClassname: PropTypes.string,
+};
+
+ProjectImg.defaultProps = {
+  imgClassname: '',
 };
 
 export default ProjectImg;

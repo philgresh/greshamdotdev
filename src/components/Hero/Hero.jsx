@@ -7,7 +7,15 @@ import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const {
+    title,
+    name,
+    subtitle,
+    ctaAbout,
+    ctaProjects,
+    ctaContact,
+    ctaSkills,
+  } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -20,7 +28,7 @@ const Header = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-  }, []);
+  }, [window.innerWidth]);
 
   return (
     <section id="hero" className="jumbotron">
@@ -49,7 +57,28 @@ const Header = () => {
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
+                {ctaAbout}
+              </Link>
+            </span>
+          </p>
+          <p className="hero-cta">
+            <span className="cta-btn">
+              <Link to="projects" smooth duration={1000}>
+                {ctaProjects}
+              </Link>
+            </span>
+          </p>
+          <p className="hero-cta">
+            <span className="cta-btn">
+              <Link to="skills" smooth duration={1000}>
+                {ctaSkills}
+              </Link>
+            </span>
+          </p>
+          <p className="hero-cta">
+            <span className="cta-btn">
+              <Link to="contact" smooth duration={1000}>
+                {ctaContact}
               </Link>
             </span>
           </p>

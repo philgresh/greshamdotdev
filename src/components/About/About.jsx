@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
-import ProjectImg from '../Image/ProjectImg';
+import AboutImg from '../Image/AboutImg';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -37,7 +37,7 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <ProjectImg
+                <AboutImg
                   alt="profile picture"
                   filename={img}
                   imgClassname={imgClassname}
