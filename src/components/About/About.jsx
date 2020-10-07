@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
 import AboutImg from '../Image/AboutImg';
@@ -68,14 +69,14 @@ const About = () => {
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">
-                    <a
+                    <OutboundLink
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
                       href={resume}
                     >
                       Resume
-                    </a>
+                    </OutboundLink>
                   </span>
                 )}
               </div>

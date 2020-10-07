@@ -16,12 +16,12 @@
   margin-bottom: -4rem;
   
   
-  // background: $white-color;
+  background: $white-color;
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
-  background: url('/public/icefield_pkwy.jpg');
-  background-position: center;
-  background-size: cover;
+  // background: url('/public/icefield_pkwy.jpg');
+  // background-position: center;
+  // background-size: cover;
 
   @include respond(phone) {
     padding: 0rem $default-font-size;

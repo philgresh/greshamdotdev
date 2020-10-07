@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
@@ -51,24 +51,24 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
+                      <OutboundLink
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
                         href={url || '#!'}
                       >
                         See Live
-                      </a>
+                      </OutboundLink>
 
                       {repo && (
-                        <a
+                        <OutboundLink
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
                           href={repo}
                         >
                           Source Code
-                        </a>
+                        </OutboundLink>
                       )}
                     </div>
                   </Fade>
@@ -82,7 +82,7 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
-                      <a
+                      <OutboundLink
                         href={url || '#!'}
                         target="_blank"
                         aria-label="Project Link"
@@ -91,7 +91,7 @@ const Projects = () => {
                         <div data-tilt className="thumbnail rounded">
                           <ProjectImg alt={title} filename={img} />
                         </div>
-                      </a>
+                      </OutboundLink>
                     </div>
                   </Fade>
                 </Col>

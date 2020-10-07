@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
@@ -17,7 +18,7 @@ const Contact = () => {
             <p className="contact-wrapper__text">
               {cta || 'Would you like to work with me? Awesome!'}
             </p>
-            <a
+            <OutboundLink
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
@@ -28,7 +29,7 @@ const Contact = () => {
               }
             >
               {btn || "Let's Talk"}
-            </a>
+            </OutboundLink>
           </div>
         </Fade>
       </Container>
