@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import { OutboundLink } from 'gatsby-plugin-gtag';
+import { PopupWidget } from 'react-calendly';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
@@ -30,6 +31,16 @@ const Contact = () => {
             >
               {btn || "Let's Talk"}
             </OutboundLink>
+            <PopupWidget
+              url="https://calendly.com/phil-gresham"
+              pageSettings={{
+                backgroundColor: 'f1f7ed',
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+                primaryColor: '6d98ba',
+                textColor: '000080',
+              }}
+            />
           </div>
         </Fade>
       </Container>

@@ -26,7 +26,7 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
+  img: 'profile-2.jpg',
   imgClassname: 'rounded shadow-lg',
   paragraphOne,
   paragraphTwo,
