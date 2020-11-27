@@ -39,7 +39,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'projects/signdocs-screencap-1.png',
+    img: 'projects/signdocs-screencap-2.gif',
     title: 'SignDocs',
     info:
       "This fullstack clone of DocuSign allows users to digitally sign documents, send those documents to others for signature, and track who has not yet signed. A user can create a digital representation of their signature by either using a selection of fonts or by using a trackpad/mouse. To prepare a document for signatures, users can upload a PDF or Word file and then drag and drop different types of fields onto the document for their signatories to fill out. They can then route the signed file directly to their signatories' email and track completion.",
@@ -50,13 +50,23 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'projects/acrosswords.png',
+    img: 'projects/acrosswords.gif',
     title: 'AcrossWords',
     info:
       'AcrossWords is a variation on the classic Crosswords game. Players are provided with a clue and a limited amount of time to fill out as many words as possible. The next word is always generated such that it overlaps with one to three letters of the beginning or end of the previous word',
     info2: 'Tech stack: React, Redux, ExpressJS, NodeJS, MongoDB',
     url: 'https://acrosswords.herokuapp.com/#/',
     repo: 'https://github.com/jacobprall/CrossWords',
+  },
+  {
+    id: nanoid(),
+    img: 'projects/css-challenge-1.gif',
+    title: 'CSS Challenges',
+    info:
+      'Every week, I send out a new animation to a Slack group for folks to try to replicate in CSS. I use Storybook to compile the animations and allow for changing some properties on the fly.',
+    info2: 'Tech stack: React, Storybook, JavaScript, SASS',
+    url: 'https://philgresh.github.io/css-challenge/',
+    repo: 'https://github.com/philgresh/css-challenge/',
   },
   {
     id: nanoid(),
