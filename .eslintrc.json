@@ -25,7 +25,7 @@
     "no-underscore-dangle": ["error", { "allow": ["_"] }],
     "no-unused-vars": [
       "warn",
-      { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
     ],
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],

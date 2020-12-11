@@ -60,7 +60,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'projects/css-challenge-1.gif',
+    img: 'projects/css-challenge-2_fylo.gif',
     title: 'CSS Challenges',
     info:
       'Every week, I send out a new animation to a Slack group for folks to try to replicate in CSS. I use Storybook to compile the animations and allow for changing some properties on the fly.',
