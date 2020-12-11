@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
-import DevIcon, { iconList } from 'devicon-react-svg';
+import DevIcon from 'devicon-react-svg';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 // import ProjectImg from '../Image/ProjectImg';
@@ -34,7 +34,7 @@ const Skills = () => {
           <Title title="Skills" />
           <Row>
             {skills.map((skill) => {
-              const { id, faIcon, name, src, devIcon } = skill;
+              const { id, name, devIcon } = skill;
 
               return (
                 <Col key={id} lg={4} sm={2}>

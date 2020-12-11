@@ -33,6 +33,10 @@
       font-size: 4rem;
     }
 
+    &:hover {
+      filter: brightness(0.8);
+    }
+
     // https://codepen.io/cbracco/pen/qzukg
     /* Add this attribute to the element that needs a tooltip */
     [data-tooltip] {
