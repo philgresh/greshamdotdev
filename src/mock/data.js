@@ -32,7 +32,7 @@ export const aboutData = {
   paragraphTwo,
   paragraphThree,
   resume:
-    'https://drive.google.com/file/d/1Vh4ArxgnH9nS7z1-57lXq4G_8J6g2BKZ/view?usp=sharing',
+    'https://drive.google.com/file/d/105YaM90nAy8KuAEmGRLfZGCQe9dK5wsX/view?usp=sharing',
 };
 
 // PROJECTS DATA
