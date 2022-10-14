@@ -1,18 +1,24 @@
 {
   "name": "gresham-dot-dev",
   "private": true,
-  "description": "Portfolio website of Phil Gresham",
-  "version": "0.1.0",
+  "description": "Personal website of Phil Gresham",
+  "version": "0.2.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philgresh/greshamdotdev"
+  },
+  "bugs": {
+    "url": "https://github.com/philgresh/greshamdotdev/issues"
+  },
   "scripts": {
-    "deploy": "npm run build && firebase deploy",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -28,7 +34,7 @@
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-sharp": "^2.7.0",
     "nanoid": "^3.1.18",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
@@ -53,13 +59,6 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.5.2",
     "prettier": "^2.2.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "husky": {
     "hooks": {
