@@ -1,9 +1,5 @@
 import { nanoid } from 'nanoid';
-import googlecloud from '../images/skills/googlecloud.svg';
-import javascript from '../images/skills/javascript.png';
-import mongodb from '../images/skills/mongodb.png';
-import nodejs from '../images/skills/nodejs.svg';
-import postgresql from '../images/skills/postgresql.png';
+import signdocs from '../images/projects/signdocs-screencap-2.gif';
 import type { About, Contact, Footer, Head, Hero, Project, Skill } from '../types';
 
 const aboutMeParagraphOne =
@@ -48,107 +44,74 @@ export const aboutData: About = {
 export const projectsData: Project[] = [
   {
     id: nanoid(),
-    img: 'projects/signdocs-screencap-2.gif',
+    img: signdocs,
     title: 'SignDocs',
     info: "This fullstack clone of DocuSign allows users to digitally sign documents, send those documents to others for signature, and track who has not yet signed. A user can create a digital representation of their signature by either using a selection of fonts or by using a trackpad/mouse. To prepare a document for signatures, users can upload a PDF or Word file and then drag and drop different types of fields onto the document for their signatories to fill out. They can then route the signed file directly to their signatories' email and track completion.",
     info2: 'Tech stack: React, Redux, Ruby on Rails, PostgreSQL, AWS S3, react-pdf, react-signature-canvas',
-    url: 'https://signdocs.herokuapp.com/',
     repo: 'https://github.com/philgresh/signdocs',
-  },
-  {
-    id: nanoid(),
-    img: 'projects/acrosswords.gif',
-    title: 'AcrossWords',
-    info: 'AcrossWords is a variation on the classic Crosswords game. Players are provided with a clue and a limited amount of time to fill out as many words as possible. The next word is always generated such that it overlaps with one to three letters of the beginning or end of the previous word',
-    info2: 'Tech stack: React, Redux, ExpressJS, NodeJS, MongoDB',
-    url: 'https://acrosswords.herokuapp.com/#/',
-    repo: 'https://github.com/jacobprall/CrossWords',
-  },
-  {
-    id: nanoid(),
-    img: 'projects/css-challenge-2_fylo.gif',
-    title: 'CSS Challenges',
-    info: 'Every week, I send out a new animation to a Slack group for folks to try to replicate in CSS. I use Storybook to compile the animations and allow for changing some properties on the fly.',
-    info2: 'Tech stack: React, Storybook, JavaScript, SASS',
-    url: 'https://philgresh.github.io/css-challenge/',
-    repo: 'https://github.com/philgresh/css-challenge/',
-  },
-  {
-    id: nanoid(),
-    img: 'projects/spacejunk.png',
-    title: 'Space Junk Eliminator',
-    info: 'This JavaScript game takes inspiration from an article I read discussing propositions to clear the nearby space of debris from launches and dead satellites.',
-    info2: 'Fully JavaScript with a few helper libraries: JQuery, PaperJS, Webpack',
-    url: 'https://philgresh.github.io/space_junk/',
-    repo: 'https://github.com/philgresh/space_junk',
   },
 ];
 
 export const skillsData: Skill[] = [
   {
     id: nanoid(),
-    name: 'JavaScript',
-    src: javascript,
-    devIcon: 'javascript',
+    name: 'TypeScript',
+    devIcon: 'devicon-typescript-plain',
   },
   {
     id: nanoid(),
-    name: 'Ruby',
-    devIcon: 'ruby',
+    name: 'Go',
+    devIcon: 'devicon-go-plain-wordmark',
+  },
+  {
+    id: nanoid(),
+    name: 'JavaScript',
+    devIcon: 'devicon-javascript-plain',
   },
   {
     id: nanoid(),
     name: 'React',
-    faIcon: 'react',
-    devIcon: 'react',
+    devIcon: 'devicon-react-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'HTML5',
-    faIcon: 'html5',
-    devIcon: 'html5',
+    devIcon: 'devicon-html5-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'CSS3',
-    faIcon: 'css3-alt',
-    devIcon: 'css3_full',
+    devIcon: 'devicon-css3-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'NodeJS',
-    src: nodejs,
-    devIcon: 'nodejs',
+    devIcon: 'devicon-nodejs-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'MongoDB',
-    src: mongodb,
-    devIcon: 'mongodb',
+    devIcon: 'devicon-mongodb-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'PostgreSQL',
-    src: postgresql,
-    devIcon: 'postgresql',
+    devIcon: 'devicon-postgresql-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'AWS',
-    faIcon: 'aws',
-    devIcon: 'aws',
+    devIcon: 'devicon-amazonwebservices-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'Google Cloud Platform',
-    src: googlecloud,
-    devIcon: 'google-cloud-platform',
+    devIcon: 'devicon-googlecloud-plain-wordmark',
   },
   {
     id: nanoid(),
     name: 'Github',
-    faIcon: 'github',
-    devIcon: 'github',
+    devIcon: 'devicon-github-original-wordmark',
   },
 ];
 

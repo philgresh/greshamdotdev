@@ -1,8 +1,8 @@
 import React from 'react';
 import Hero from './Hero';
 import About from './About';
-// import Projects from './Projects/Projects';
-// import Skills from './Skills/Skills';
+import Projects from './Projects';
+import Skills from './Skills';
 // import Contact from './Contact/Contact';
 // import Footer from './Footer/Footer';
 
@@ -24,8 +24,8 @@ const App = () => {
     <PortfolioProvider value={contextValue}>
       <Hero />
       <About />
-      {/* <Projects /> */}
-      {/* <Skills /> */}
+      <Projects />
+      <Skills />
       {/* <Contact /> */}
       {/* <Footer /> */}
     </PortfolioProvider>

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { OutboundLink } from 'gatsby-plugin-gtag';
-import Title from './Title/Title';
+import Title from './Title';
 import PortfolioContext from '../context/context';
 import AboutImg from './Image/AboutImg';
 

@@ -25,8 +25,8 @@ export type About = {
 
 export type Project = {
   id: string;
+  title: string;
   img?: string;
-  title?: string;
   info?: string;
   info2?: string;
   url?: string;
@@ -35,9 +35,12 @@ export type Project = {
 export type Skill = {
   id: string;
   name: string;
-  src?: string;
+  /**
+   * `devIcon` is the classname of the DevIcon image.
+   * @link https://devicon.dev/
+   * @example 'devicon-typescript-plain'
+   */
   devIcon?: string;
-  faIcon?: string;
 };
 
 export type Contact = {
