@@ -48,8 +48,18 @@ export const aboutData: About = {
 export const projectsData: Project[] = [
   {
     id: nanoid(),
-    img: 'projects/signdocs-screencap-2.gif',
+    title: 'Tsunami Events',
+    img: 'projects/tsunami-events-screencap-1.png',
+    info: 'Tsunamis are a major hazard to visitors and residents in low-lying areas close to the ocean. Many seaside areas have tsunami alert sirens, but for residents of and visitors to beaches without sirens, a tsunami could become deadly. This app sets up a listener for tsunami events and distributes an SMS alert to participants to provide supplemental warning.',
+    info2:
+      'Tech stack: TypeScript React, Google Cloud Firebase backend including NoSQL Realtime Database, Cloud Functions, Auth.',
+    url: 'https://tsunami.events',
+    repo: 'https://github.com/philgresh/tsunami-events',
+  },
+  {
+    id: nanoid(),
     title: 'SignDocs',
+    img: 'projects/signdocs-screencap-2.gif',
     info: "This fullstack clone of DocuSign allows users to digitally sign documents, send those documents to others for signature, and track who has not yet signed. A user can create a digital representation of their signature by either using a selection of fonts or by using a trackpad/mouse. To prepare a document for signatures, users can upload a PDF or Word file and then drag and drop different types of fields onto the document for their signatories to fill out. They can then route the signed file directly to their signatories' email and track completion.",
     info2: 'Tech stack: React, Redux, Ruby on Rails, PostgreSQL, AWS S3, react-pdf, react-signature-canvas',
     repo: 'https://github.com/philgresh/signdocs',
