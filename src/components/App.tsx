@@ -4,7 +4,7 @@ import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
-// import Footer from './Footer/Footer';
+import Footer from './Footer';
 
 import { PortfolioProvider } from '../context/context';
 import type { PortfolioContextType } from '../types';
@@ -13,13 +13,14 @@ import {
   aboutData as about,
   contactData as contact,
   footerData as footer,
+  headData as head,
   heroData as hero,
   projectsData as projects,
   skillsData as skills,
 } from '../mock/data';
 
 const App = () => {
-  const contextValue: PortfolioContextType = { hero, about, projects, contact, footer, skills };
+  const contextValue: PortfolioContextType = { head, hero, about, projects, contact, footer, skills };
   return (
     <PortfolioProvider value={contextValue}>
       <Hero />
@@ -27,7 +28,7 @@ const App = () => {
       <Projects />
       <Skills />
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </PortfolioProvider>
   );
 };
