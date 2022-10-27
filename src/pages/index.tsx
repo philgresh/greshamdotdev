@@ -4,23 +4,23 @@ import App from '../components/App';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
+import type { HeadFC } from 'gatsby';
 
-const Root = () => {
-  const { title, lang, description } = headData;
+const Index = () => {
+  const { title, lang, description, devIconsVersion } = headData;
 
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{title}</title>
-        <html lang={lang || 'en'} />
+        <html lang={lang} />
         <meta name="description" content={description} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
-          defer
+          href={`https://cdn.jsdelivr.net/gh/devicons/devicon@${devIconsVersion}/devicon.min.css`}
         />
       </Helmet>
       <App />
@@ -28,4 +28,5 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default Index;
+export const Head: HeadFC = () => <title>Home Page</title>;
