@@ -7,18 +7,21 @@ import '../style/main.scss';
 import type { HeadFC } from 'gatsby';
 
 const Index = () => {
-  const { title, lang, description } = headData;
+  const { title, lang, description, devIconsVersion } = headData;
 
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{title}</title>
-        <html lang={lang || 'en'} />
+        <html lang={lang} />
         <meta name="description" content={description} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+        <link
+          rel="stylesheet"
+          href={`https://cdn.jsdelivr.net/gh/devicons/devicon@${devIconsVersion}/devicon.min.css`}
+        />
       </Helmet>
       <App />
     </>

@@ -2,6 +2,7 @@ export type Head = {
   title: string;
   lang: 'en';
   description: string;
+  devIconsVersion: string;
 };
 
 export type Section = {
@@ -20,7 +21,10 @@ export type Hero = {
 export type About = {
   img: string;
   resume: string;
-  paragraphs: string[];
+  paragraphs: {
+    id: string;
+    text: string;
+  }[];
 };
 
 export type Project = {

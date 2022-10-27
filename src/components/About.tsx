@@ -22,8 +22,10 @@ const About = () => {
           </Col>
           <Col md={6} sm={12}>
             <div className="about-wrapper__info">
-              {paragraphs.map((paragraph) => (
-                <p className="about-wrapper__info-text">{paragraph}</p>
+              {paragraphs.map(({ id, text }) => (
+                <p className="about-wrapper__info-text" key={id}>
+                  {text}
+                </p>
               ))}
               <span className="d-flex mt-3">
                 <OutboundLink

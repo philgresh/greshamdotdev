@@ -20,7 +20,7 @@ const Header = () => {
           {subtitle}
         </h1>
         {Object.entries(sections).map(([id, { title }]) => (
-          <p className="hero-cta">
+          <p className="hero-cta" key={id}>
             <span className="cta-btn cta-btn--hero">
               <Link to={id} smooth duration={SCROLL_DURATION}>
                 {title}
