@@ -5,10 +5,9 @@ import PortfolioContext from '../context/context';
 import Title from './Title';
 
 const Contact = () => {
-  const { contact } = useContext(PortfolioContext);
-  if (!contact) return null;
-
-  const { cta, btn, email } = contact;
+  const {
+    contact: { cta, btn, email },
+  } = useContext(PortfolioContext);
 
   return (
     <section id="contact">

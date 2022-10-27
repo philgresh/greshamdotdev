@@ -8,8 +8,6 @@ import Title from './Title';
 const Projects = () => {
   const { projects } = React.useContext(PortfolioContext);
 
-  if (!projects) return null;
-
   return (
     <section id="projects">
       <Container>

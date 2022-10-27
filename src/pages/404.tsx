@@ -17,7 +17,7 @@ export default () => {
       <section id="hero" className="jumbotron">
         <Container>
           <h1 className="hero-title text-center">
-            Sorry, this path does not exist{' '}
+            Sorry, this path does not exist&nbsp;
             <span role="img" aria-label="emoji">
               😞
             </span>

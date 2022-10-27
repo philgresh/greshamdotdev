@@ -3,7 +3,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const ProjectImg = ({ filename, alt, imgClassname }) => {
+export type ProjectImgProps = {
+  filename: string;
+  alt: string;
+  imgClassname?: string;
+};
+
+const ProjectImg = ({ filename, alt, imgClassname }: ProjectImgProps) => {
   return (
     <StaticQuery
       query={graphql`
@@ -25,7 +31,7 @@ const ProjectImg = ({ filename, alt, imgClassname }) => {
         }
       `}
       render={(data) => {
-        const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+        const image = data.images.edges.find((n: any) => n.node.relativePath.includes(filename));
 
         if (!image) return null;
 
@@ -39,16 +45,6 @@ const ProjectImg = ({ filename, alt, imgClassname }) => {
       }}
     />
   );
-};
-
-ProjectImg.propTypes = {
-  filename: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  imgClassname: PropTypes.string | undefined,
-};
-
-ProjectImg.defaultProps = {
-  imgClassname: '',
 };
 
 export default ProjectImg;

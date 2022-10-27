@@ -11,8 +11,6 @@ const devIconStyle = {
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
 
-  if (!skills) return null;
-
   return (
     <section id="skills">
       <Container>

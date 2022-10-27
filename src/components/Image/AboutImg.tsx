@@ -1,9 +1,13 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const AboutImg = ({ filename, alt }) => (
+export type AboutImgProps = {
+  filename: string;
+  alt: string;
+};
+
+const AboutImg = ({ filename, alt }: AboutImgProps) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,9 +27,7 @@ const AboutImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) =>
-        n.node.relativePath.includes(filename),
-      );
+      const image = data.images.edges.find((n: any) => n.node.relativePath.includes(filename));
 
       if (!image) return null;
 
@@ -34,10 +36,5 @@ const AboutImg = ({ filename, alt }) => (
     }}
   />
 );
-
-AboutImg.propTypes = {
-  filename: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-};
 
 export default AboutImg;

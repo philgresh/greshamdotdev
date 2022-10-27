@@ -6,10 +6,9 @@ import PortfolioContext from '../context/context';
 const SCROLL_DURATION = 700;
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
-  if (!hero) return null;
-
-  const { title, name, subtitle, sections } = hero;
+  const {
+    hero: { title, name, subtitle, sections },
+  } = useContext(PortfolioContext);
 
   return (
     <section id="hero" className="jumbotron">

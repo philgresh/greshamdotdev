@@ -60,11 +60,11 @@ export type Footer = {
 };
 
 export type PortfolioContextType = {
-  head?: Head;
-  hero?: Hero;
-  about?: About;
-  projects?: Project[];
-  skills?: Skill[];
-  contact?: Contact;
-  footer?: Record<string, any>;
+  head: Head;
+  hero: Hero;
+  about: About;
+  projects: Project[];
+  skills: Skill[];
+  contact: Contact;
+  footer: Footer;
 };

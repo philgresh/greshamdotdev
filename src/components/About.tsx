@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { OutboundLink } from 'gatsby-plugin-gtag';
 import Title from './Title';
@@ -6,23 +6,9 @@ import PortfolioContext from '../context/context';
 import AboutImg from './Image/AboutImg';
 
 const About = () => {
-  const { about, hero } = useContext(PortfolioContext);
-  if (!about || !hero) return null;
-
-  const { img, resume, paragraphs } = about;
-
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []);
+  const {
+    about: { img, resume, paragraphs },
+  } = React.useContext(PortfolioContext);
 
   return (
     <section id="about">
