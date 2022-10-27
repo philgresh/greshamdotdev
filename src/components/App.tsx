@@ -3,7 +3,7 @@ import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
-// import Contact from './Contact/Contact';
+import Contact from './Contact';
 // import Footer from './Footer/Footer';
 
 import { PortfolioProvider } from '../context/context';
@@ -26,7 +26,7 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Footer /> */}
     </PortfolioProvider>
   );
